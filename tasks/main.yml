@@ -1,0 +1,8 @@
+---
+- name: write config file
+  template:
+    src=rsyslog-service.conf.j2
+    dest="/etc/rsyslog.d/{{ service }}.conf"
+    owner=root group=root mode=0644
+  notify:
+  - restart rsyslog

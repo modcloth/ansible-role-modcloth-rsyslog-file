@@ -1,0 +1,4 @@
+---
+service: service
+files: []
+location: /etc/rsyslog.d
