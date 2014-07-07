@@ -4,6 +4,6 @@
 $InputFileName {{ file.name }}
 $InputFileTag {{ file.tag | default(service) }}
 $InputFileStateFile state-{{ file.state_file | default(file.name.split('/')[-1]) }}
-$InputFileSeverity {{ file.severity | default(notice) }}
+$InputFileSeverity {{ file.severity | default('notice') }}
 $InputRunFileMonitor
 {% endfor %}
