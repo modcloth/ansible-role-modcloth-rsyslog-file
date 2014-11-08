@@ -1,4 +1,6 @@
 ---
+- name: ensure config directory exists
+  file: state=directory recurse=yes name={{ location }}
 - name: write config file
   template:
     src=rsyslog-service.conf.j2
